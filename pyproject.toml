@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "ria"
+version = "0.1.0"
+description = "Driving the creation of intelligent radio. 📡🚀"
+readme = "README.md"
+license = "Proprietary"
+keywords = [
+  "cognative radio",
+  "software defined radio",
+  "machine learning",
+  "artificial intelligence",
+  "deep learning"
+]
+authors = [
+  "Qoherent Inc. <info@qoherent.ai>"
+]
+maintainers = [
+  "Ashkan Beigi <ash@qoherent.ai>",
+  "Michael Luciuk <michael@qoherent.ai>",
+  "Alec Digby <alec@qoherent.ai>",
+]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Programming Language :: Python :: 3",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: GNU Affero General Public License v3",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Typing :: Typed"
+]
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^1.26.3"
+matplotlib = "^3.8.2"
+torch = "^2.2.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.0.0"
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "^7.2.6"
+sphinx-rtd-theme = "^2.0.0"
+
+[tool.poetry.urls]
+"Qoherent" = "https://www.qoherent.ai/"
+"Documentation" = ""
+"Source" = "https://github.com/qoherent/ria"
+"Issues" = "https://github.com/qoherent/ria/issues"
