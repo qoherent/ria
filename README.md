@@ -150,7 +150,7 @@ RIA Core is developed and maintained by [Qoherent](https://www.qoherent.ai/) as 
 and with the invaluable support of 
 [many independent contributors](https://github.com/qoherent/ria/network/dependencies).
 
-If you are doing research with RIA, please cite our project
+If you are doing research with RIA, please cite our project:
 
 > [1] Qoherent Inc., "Radio Intelligence Apps," 2024. [Online]. Available: https://github.com/qoherent/ria
 
