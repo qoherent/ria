@@ -23,7 +23,6 @@
    RIA Core <intro/index>
    Dataset Manager <dataset_manager/index>
    Model Builder <model_builder/index>
-   Application Packager <application_packager/index>
    Utils <utils/index>
    Want More RIA? <marketing/index>
 
