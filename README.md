@@ -8,21 +8,13 @@
 <h4 align="center">Driving the Creation Intelligent Radio 📡🚀</h4>
 
 <p align="center">
-  <!-- Tests (GitHub actions) -->
-  <a href="https://github.com/Qoherent/ria-project/actions?query=workflow%3ATests">
-    <img src="https://img.shields.io/github/actions/workflow/status/Qoherent/ria-project/tests.yml?branch=main" />
-  </a>
-  <!-- ReadTheDocs -->
-  <a href="https://docs.ria.ai/en/latest">
-    <img src="https://readthedocs.com/projects/ria/badge/?version=latest" />
+  <!-- License -->
+  <a href="https://www.gnu.org/licenses/agpl-3.0">
+    <img src="https://img.shields.io/badge/License-AGPLv3-blue.svg" />
   </a>
   <!-- PyPI -->
   <a href="https://pypi.org/project/ria">
-    <img src="https://badge.fury.io/py/pandas.svg?logo=apache&style=flat-square"/>
-  </a>
-  <!-- License -->
-  <a href="https://www.gnu.org/licenses/gpl-3.0">
-    <img src="https://img.shields.io/badge/License-GPLv3-blue.svg" />
+    <img src="https://img.shields.io/pypi/status/ria"/>
   </a>
 </p>
 
@@ -31,14 +23,12 @@
 RIA Core serves as the foundational core of RIA Suite, an extensive AI development platform designed 
 for [software-defined radios](https://en.wikipedia.org/wiki/Software-defined_radio). RIA Core is the 
 open-source set of utilities, features, and command-line scripts that power the
-[RIA project](https://www.qoherent.ai/radiointelligenceapps-suite/).
+[RIA project]().
 
 RIA drives the creation of [intelligent radios](https://www.qoherent.ai/intelligentradio/), unlocking 
-solutions in an increasingly congested and challenged wireless spectrum. Explore the RIA project on 
+solutions in an increasingly congested, contested, and complex wireless spectrum. Explore the RIA project on 
 our website [here](https://www.qoherent.ai/radiointelligenceapps-suite/).
 
-Let's build radios together! Connect with the RIA community: Discover and share pre-trained models and 
-datasets on [RIAHUB]().
 
 ## 🌟 Key Features
 
@@ -50,20 +40,19 @@ efficiently store them as HDF5, streamlining data management for enhancing acces
 freeing up more time for research and development.
 
 
-- Streamline integration and deployment of AI models into SDR-enabled systems, ensuring a 
+- Coming soon: Streamline integration and deployment of AI models into SDR-enabled systems, ensuring a 
 smooth transition from development to real-world applications.
 
 
-- Eliminate bottlenecks from your machine learning pipelines with automated process orchestration, ensuring smoother 
-workflows and fewer headaches.
+- Coming soon: Eliminate bottlenecks from your machine learning pipelines with automated process orchestration, 
+ensuring smoother workflows and fewer headaches.
 
 
 ## 🚀 Want More RIA? 
 
 - Experience the complete, user-friendly, GUI-based AI development experience offered by 
-[RIA Suite](https://www.qoherent.ai/radiointelligenceapps-suite/). This comprehensive solution provides an 
-intuitive and feature-rich environment, empowering developers to explore, create, and optimize AI applications 
-well beyond what is achievable with RIA Core.
+[RIA Suite](https://www.qoherent.ai/radiointelligenceapps-suite/). This comprehensive solution provides an intuitive and feature-rich environment,
+empowering developers to explore, create, and optimize AI applications.
 
 
 - [RIARAN](https://www.qoherent.ai/radiointelligenceapps-ran/) allows seamless integration of high-performance ML 
@@ -73,7 +62,7 @@ you to harness the power of AI for sensing and communications.
 
 ## 🛠️ Getting Started
 
-RIA Core is avaiable at [PyPI](https://pypi.org/project/ria), and can be installed with pip:
+RIA Core is available at [PyPI](https://pypi.org/project/ria), and can be installed with pip:
 ```sh
 pip install ria
 ```
@@ -82,17 +71,13 @@ Interfacing with your local SDR hardware may require additional drivers and conf
 
 Please [Read the Docs]() for more information on getting started with RIA.
 
-Check out our example notebooks on [Google Colab]().
-
-Let's build radios together. Engage with the RIA community: Find and share pre-trained models and datasets on [RIAHUB]().
-
 ## 🐳 Docker Support
 
-Docker support is available for building images using both CPU and GPU.
+Coming soon: Docker support for building images for both CPU and GPU targets.
 
 ## 💻 Usage
 
-RIA Core comprises importable modules, similar to any Python package, and a set of command-line bindings, 
+RIA Core consists of importable modules and a set of command-line bindings, 
 allowing you to execute key functionality from the command line.
 
 For example, if we wanted to curate a dataset from a collection of SigMF recordings, apply an artificial IQ 
@@ -105,7 +90,7 @@ Alternatively, we could achieve the same in Python with:
 ```python
 from math import pi
 from ria import curate
-from ria.imparements import iq_imblance
+from ria.impairments import iq_imblance
 
 # Curate a radio dataset from a collection of SigMF recordings.
 dataset = curate(recordings='data/recordings')
@@ -126,16 +111,16 @@ ria train --train_dataset 'data/datasets/out.h5' --model 'LTE_NR_CLassifier' --b
 Equivalently, in Python:
 ```python
 from ria.models import LTE_NR_CLassifier
-from ria.trainers import Trainer
+from pytorch_lightning import Trainer
 from torch.utils.data import DataLoader
-
-# RIA datasets are compatible with the Torch DataLoader
-train_loader = DataLoader(dataset, batch_size=4)
 
 # A custom RIA model, optimized for radio classification!
 lte_nr_classifier = LTE_NR_CLassifier()  
 
-# Train the model, using the familiar PyTorch Lightning syntax
+# RIA datasets are compatible with the Torch DataLoader...
+train_loader = DataLoader(dataset, batch_size=4)
+
+# ...and can be trained using a PyTorch Lightning Trainer! 
 trainer = Trainer()
 trainer.fit(model=lte_nr_classifier, train_dataloaders=train_loader)
 
@@ -145,10 +130,6 @@ lte_nr_classifier.to_onnx("models/classifier.onnx")
 
 If RIA's syntax feels familiar, that's because RIA is built on [PyTorch](https://pytorch.org/docs/stable/data.html) 
 and [PyTorch Lightning](https://lightning.ai/docs/pytorch/stable/)!
-
-**TODO:**
-- [ ] Add example of packaging a model using the ``application_packager``
-- [ ] Add example of training a model using our orchestration tooling?
 
 
 ## 🤝 Contribution
@@ -169,9 +150,9 @@ RIA Core is developed and maintained by [Qoherent](https://www.qoherent.ai/) as 
 and with the invaluable support of 
 [many independent contributors](https://github.com/qoherent/ria/network/dependencies).
 
-If you are doing reserach with RIA, please cite our [application_packager]():
+If you are doing research with RIA, please cite our project
 
-> Ash Beigi et al. *Radio Intelligence Apps: Driving the Creation of Intelligent Radio.* 2024. arXiv:1234.12345
+> [1] Qoherent Inc., "Radio Intelligence Apps," 2024. [Online]. Available: https://github.com/qoherent/ria
 
 If you like what we're doing, don't forget to give the project a star! ⭐
 
