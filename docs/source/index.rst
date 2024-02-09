@@ -9,8 +9,8 @@
 
    <p style="text-align:center;">by</p>
 
-.. figure:: branding/qoherent.png
-   :scale: 20%
+.. figure:: branding/logo-dark.png
+   :scale: 130%
    :alt: Qoherent
    :align: center
 
