@@ -1,11 +1,12 @@
 [tool.poetry]
 name = "ria"
 version = "0.1.0"
-description = "Driving the creation of intelligent radio. 📡🚀"
+description = "Lets build intelligent radios together. 📡🚀"
 readme = "README.md"
 license = "Proprietary"
 keywords = [
-  "cognative radio",
+  "cognitive radio",
+  "intelligent radio",
   "software defined radio",
   "machine learning",
   "artificial intelligence",
