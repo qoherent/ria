@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "ria"
 version = "0.1.0"
-description = "Lets build intelligent radios together. 📡🚀"
+description = "Let's build intelligent radios together. 📡🚀"
 readme = "README.md"
 license = "Proprietary"
 keywords = [

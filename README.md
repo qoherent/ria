@@ -5,7 +5,7 @@
 
 <h3 align="center">By <a href="https://www.qoherent.ai/">Qoherent</a></h3>
 
-<h4 align="center">Driving the Creation Intelligent Radio 📡🚀</h4>
+<h4 align="center">Let's build intelligent radios together 📡🚀</h4>
 
 <p align="center">
   <!-- License -->
@@ -20,9 +20,9 @@
 
 # RIA Core
 
-RIA Core serves as the foundational core of RIA Suite, an extensive AI development platform designed 
+RIA Core serves as the foundational core of [RIAHUB](https://riahub.ai/), an extensive AI development platform designed 
 for [software-defined radios](https://en.wikipedia.org/wiki/Software-defined_radio). RIA Core is the 
-open-source set of utilities, features, and command-line scripts that power [RIAHUB](https://riahub.ai/).
+open-source set of utilities, features, and command-line scripts within the RIAHUB back end.
 
 RIA drives the creation of [intelligent radios](https://www.qoherent.ai/intelligentradio/), unlocking 
 solutions in an increasingly congested, contested, and complex wireless spectrum. Explore the RIA project on 
