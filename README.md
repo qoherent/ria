@@ -3,61 +3,69 @@
   <img src="./docs/source/branding/riacore.png" alt="Radio Intelligence Apps">
 </h2>
 
-<h3 align="center">By <a href="https://www.qoherent.ai/">Qoherent</a></h3>
+<h3 align="center">Radio Intelligence Apps, By <a href="https://www.qoherent.ai/">Qoherent</a></h3>
 
 <h4 align="center">Let's build intelligent radios together 📡🚀</h4>
 
 <p align="center">
+  <!-- PyPI -->
+  <a href="https://pypi.org/project/ria">
+    <img src="https://img.shields.io/pypi/v/ria"/>
+  </a>
   <!-- License -->
   <a href="https://www.gnu.org/licenses/agpl-3.0">
     <img src="https://img.shields.io/badge/License-AGPLv3-blue.svg" />
   </a>
-  <!-- PyPI -->
+  <!-- Status -->
   <a href="https://pypi.org/project/ria">
     <img src="https://img.shields.io/pypi/status/ria"/>
   </a>
+  <!-- Docs -->
+  <a href="http://docs.radiointelligence.io/">
+    <img src="https://img.shields.io/badge/docs-ria--core-blue"/>
+  </a>
 </p>
+
 
 # RIA Core
 
-RIA Core serves as the foundational core of [RIAHUB](https://riahub.ai/), an extensive AI development platform designed 
-for [software-defined radios](https://en.wikipedia.org/wiki/Software-defined_radio). RIA Core is the 
-open-source set of utilities, features, and command-line scripts within the RIAHUB back end.
+RIA Core is the foundational, open-source core of [RIA Hub](https://riahub.ai/), an extensive AI development 
+platform tailored for [software-defined radio](https://en.wikipedia.org/wiki/Software-defined_radio) (SDR).
 
-RIA drives the creation of [intelligent radios](https://www.qoherent.ai/intelligentradio/), unlocking 
-solutions in an increasingly congested, contested, and complex wireless spectrum. Explore the RIA project on 
+RIA Core drives the creation of [intelligent radios](https://www.qoherent.ai/intelligentradio/), unlocking 
+solutions in an increasingly congested, contested, and complex wireless spectrum. Learn more about RIA Core on 
 our website [here](https://www.qoherent.ai/radiointelligenceapps-project/).
 
 
 ## 🌟 Key Features
 
-- Synthesize modulated RF recordings based on generated in GNU Radio, MATLAB, or Python rapidly.
+- Synthesize modulated radio frequency (RF) recordings based on signals generated in Python, 
+[GNU Radio](https://www.gnuradio.org/), or [MATLAB](https://www.mathworks.com/products/matlab.html), 
+expediting prototyping and experimentation.
 
-- Effortlessly capture and curate RF datasets from [SigMF](https://github.com/sigmf/SigMF) recordings and 
-efficiently store them as HDF5, streamlining data management for enhancing accessibility.
 
-- Seamless integration with [IQengine](https://iqengine.org/browser) for visualizing and inspecting recordings.
+- Visualize and inspect recordings with [IQengine](https://iqengine.org/browser), simplifying data exploration.
+
+
+- Curate RF datasets from [SigMF](https://github.com/sigmf/SigMF) recordings and 
+store them in [HDF5](https://github.com/HDFGroup/hdf5) format, streamlining data management 
+and enhancing accessibility.
+
 
 - Accelerate model development with off-the-shelf deep learning models, tailored for radio applications, 
 freeing up more time for research and development.
 
-- Coming soon VIA RIAHUB: Streamline integration and deployment of AI models into SDR-enabled systems, ensuring a 
-smooth transition from development to real-world applications.
 
-- Coming soon VIA RIAHUB: Eliminate bottlenecks from your machine learning pipelines with automated process orchestration, 
-ensuring smoother workflows and fewer headaches.
+## 🚀 Want More RIA?
 
-
-## 🚀 Want More RIA? 
-
-- Experience the complete, user-friendly, GUI-based AI development experience offered by 
-[RIAHUB](https://www.qoherent.ai/radiointelligenceapps-hub/). This comprehensive solution provides an intuitive and feature-rich environment,
-empowering developers to explore, create, and optimize AI applications for SDR.
+- Experience the complete, GUI-based AI development experience offered by 
+[RIA Hub](https://www.qoherent.ai/radiointelligenceapps-hub/). This comprehensive solution provides an intuitive 
+and feature-rich environment, empowering developers to explore, create, and optimize AI applications for SDR.
 
 
-- [RIARAN](https://www.qoherent.ai/radiointelligenceapps-ran/) allows seamless integration of high-performance ML 
-inference software directly onto an open-source [gNodeB](https://inseego.com/resources/5g-glossary/what-is-gnb/), empowering 
-you to harness the power of AI for sensing and communications.
+- [RIA RAN](https://www.qoherent.ai/radiointelligenceapps-ran/) allows seamless integration of high-performance ML 
+inference software directly onto an open-source [gNodeB](https://inseego.com/resources/5g-glossary/what-is-gnb/), 
+empowering radio engineers to leverage AI for sensing and communications.
 
 
 ## 🛠️ Getting Started
@@ -69,11 +77,14 @@ pip install ria
 
 Interfacing with your local SDR hardware may require additional drivers and configurations.
 
-Please [Read the Docs](docs.radiointelligence.io) for more information on getting started with RIA.
+Please refer to the [documentation](http://docs.radiointelligence.io/) for more information on getting
+started with RIA Core.
+
 
 ## 🐳 Docker Support
 
 Coming soon: Docker support for building images for both CPU and GPU targets.
+
 
 ## 💻 Usage
 
@@ -131,7 +142,7 @@ lte_nr_classifier.to_onnx("models/classifier.onnx")
 If RIA's syntax feels familiar, that's because RIA is built on [PyTorch](https://pytorch.org/docs/stable/data.html) 
 and [PyTorch Lightning](https://lightning.ai/docs/pytorch/stable/)! 
 
-Other back-ends can be made available - [Contact us](https://www.qoherent.ai/contact/) for more information.
+Additional back-ends can be made available. Please [contact us](https://www.qoherent.ai/contact/) for further details.
 
 
 ## 🤝 Contribution
@@ -140,8 +151,8 @@ We welcome contributions from the community! Whether it's a bug fix, new feature
 input is valuable. If you would like to contribute directly to RIA, you will be invited to sign a contributor 
 agreement, email us at [info@qoherent.ai](info@qoherent.ai) for more information.
 
-If you have a larger project in mind, please reach out to us by email at 
-[info@qoherent.ai](info@qoherent.ai), we'd love to collaborate with you. 🚀
+If you have a larger project in mind, please [contact us](https://www.qoherent.ai/contact/) directly,
+we'd love to collaborate with you. 🚀
 
 If you are having issues, please let us know by posting the issue on our GitHub issue tracker 
 [here](https://github.com/qoherent/ria/issues).
@@ -149,11 +160,11 @@ If you are having issues, please let us know by posting the issue on our GitHub 
 Qoherent is dedicated to fostering a friendly, safe, and inclusive environment for everyone.
 Kindly review and adhere to our [Code of Conduct](.github/CODE_OF_CONDUCT.md).
 
+
 ## 🖊️ Authorship
 
-RIA Core is developed and maintained by [Qoherent](https://www.qoherent.ai/) as part of the RIA project, 
-and with the invaluable support of 
-[many independent contributors](https://github.com/qoherent/ria/network/dependencies).
+RIA Core is developed and maintained by [Qoherent](https://www.qoherent.ai/), with the invaluable support of 
+[many independent contributors](https://github.com/qoherent/ria/graphs/contributors).
 
 If you are doing research with RIA, please cite our project:
 
@@ -161,8 +172,9 @@ If you are doing research with RIA, please cite our project:
 
 If you like what we're doing, don't forget to give the project a star! ⭐
 
+
 ## 📄 License
 
 RIA Core is **free and open-source**, released under [AGPLv3](https://www.gnu.org/licenses/agpl-3.0.en.html).
 
-Alternative licenses are available, [contact us](https://www.qoherent.ai/contact/) for more information. 
+Alternative licensing options are available. Please [contact us](https://www.qoherent.ai/contact/) for further details.
