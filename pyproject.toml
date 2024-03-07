@@ -51,6 +51,6 @@ sphinx-rtd-theme = "^2.0.0"
 
 [tool.poetry.urls]
 "Qoherent" = "https://www.qoherent.ai/"
-"Documentation" = ""
+"Documentation" = "http://docs.radiointelligence.io/"
 "Source" = "https://github.com/qoherent/ria"
 "Issues" = "https://github.com/qoherent/ria/issues"
