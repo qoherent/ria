@@ -88,8 +88,11 @@ Coming soon: Docker support for building images for both CPU and GPU targets.
 
 ## 💻 Usage
 
-RIA Core consists of importable modules and a set of command-line bindings, 
-allowing you to execute key functionality from the command line.
+RIA Core consists of importable modules that can be used within your Python projects, as well as a command-line 
+interface (CLI), allowing you to execute key functionality directly from the command line.
+
+The RIA CLI is automatically installed alongside RIA. Simply execute `ria --help` from the command line for
+CLI usage information.
 
 For example, if we wanted to curate a dataset from a collection of SigMF recordings, apply an artificial IQ 
 Imbalance, and save to file as a machine-learning ready dataset, we could do this from the command line with:
