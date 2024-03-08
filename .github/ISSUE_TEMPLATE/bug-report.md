@@ -43,7 +43,8 @@ Which aspect of RIA Core are you experiencing issues with?
 
 
 **Version and Environment Information:**
-[Replace this line with the output of `ria.print_version_info()`.]
+[Replace this line with RIA Core version and environment information. This information can be accessed by executing 
+`ria version` from the command line or by calling the `ria.print_version_info()` function in Python.]
 
 
 **Radio Hardware and Driver Information:**
