@@ -30,22 +30,20 @@ def print_version_info() -> None:
     sys_info = _get_sys_info()
     cuda_info = _get_cuda_info()
     dependency_info = _get_dependency_info()
+    max_len = 15
 
     print("\nSYSTEM")
     print("------")
-    max_len = max(len(x) for x in sys_info)
     for k, v in sys_info.items():
         print(f"{k:<{max_len}}: {v}")
 
     print("\nCUDA")
     print("----")
-    max_len = max(len(x) for x in cuda_info)
     for k, v in cuda_info.items():
         print(f"{k:<{max_len}}: {v}")
 
     print("\nDEPENDENCIES")
     print("------------")
-    max_len = max(len(x) for x in dependency_info)
     for k, v in dependency_info.items():
         print(f"{k:<{max_len}}: {v}")
 
