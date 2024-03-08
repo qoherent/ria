@@ -1,5 +1,5 @@
 """
-This module contains the main CLI for the RIA application.
+This module contains the main group for the RIA Core CLI.
 """
 import click
 
@@ -13,7 +13,6 @@ from scripts.utils import commands as utils_commands
 @click.option('-v', '--verbose', is_flag=True,
               help="Increase verbosity, especially useful for debugging.")
 def ria_cli(verbose: bool):
-    print(dir(diagnostic_commands))
     if verbose:
         click.echo("Verbose mode enabled.")
     pass
@@ -26,7 +25,7 @@ modules = [
     utils_commands
 ]
 
-# Loop through the modules, binding all CLI commands to the ria group
+# Loop through the modules, binding all CLI commands to the ria group.
 for module in modules:
     for command_name in dir(module):
         command = getattr(module, command_name)
