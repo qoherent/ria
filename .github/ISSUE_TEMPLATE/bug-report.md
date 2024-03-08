@@ -12,7 +12,7 @@ moment to review the issue tracker for any existing reports related to the same 
 
 Many user applications of RIA Core require interfacing with external radio hardware. Prior to submitting a 
 bug report, please confirm that the issue you're experiencing is attributable to RIA Core, rather than your 
-hardware/driver configuration. If you are unsure, feel free to ask in our [support formum](https://github.com/qoherent/michael/discussions/categories/support).
+hardware/driver configuration. If you are unsure, feel free to ask in our [support forum](https://github.com/qoherent/michael/discussions/categories/support).
 
 **Description:**
 [A clear and concise description of the issue.]
