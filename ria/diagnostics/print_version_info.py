@@ -9,7 +9,9 @@ import os
 import platform
 import struct
 import sys
+
 import torch
+import subprocess
 
 from importlib.metadata import version, PackageNotFoundError
 from typing import Any
@@ -56,7 +58,7 @@ def _get_sys_info() -> dict[str, Any]:
     language_code, encoding = locale.getlocale()
 
     return {
-        "commit": "",  # TODO: Get commit hash.
+        "commit": _get_commit_hash(),
         "python": ".".join([str(i) for i in sys.version_info]),
         "python-bits": struct.calcsize("P") * 8,
         "OS": uname_result.system,
@@ -118,3 +120,16 @@ def _get_dependency_info() -> dict[str, Any]:
             result[d] = "COULD NOT RESOLVE"
 
     return result
+
+
+def _get_commit_hash() -> str:
+    """
+    :return: The Git commit hash of the installed instance of RIA Core.
+
+    :raises RuntimeError: If Git is not installed or not accessible from the command line.
+    """
+    try:
+        return subprocess.check_output(['git', 'rev-parse', 'HEAD']).strip().decode('utf-8')
+    except subprocess.CalledProcessError as e:
+        raise RuntimeError("Unable to determine commit hash. Please ensure that Git is "
+                           "installed and accessible from the command line.", e.output)
