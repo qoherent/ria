@@ -142,23 +142,26 @@ lte_nr_classifier.to_onnx("models/classifier.onnx")
 If RIA's syntax feels familiar, that's because RIA is built on [PyTorch](https://pytorch.org/docs/stable/data.html) 
 and [PyTorch Lightning](https://lightning.ai/docs/pytorch/stable/)! 
 
+Please refer to the [documentation](http://docs.radiointelligence.io/) for additional usage examples. If you 
+encounter any difficulties, don't hesitate to reach out on our open [support forum](https://github.com/qoherent/ria/discussions/categories/support).
+
 Additional back-ends can be made available. Please [contact us](https://www.qoherent.ai/contact/) for further details.
 
 
 ## 🤝 Contribution
 
-We welcome contributions from the community! Whether it's a bug fix, new feature, or improvement, your 
-input is valuable. If you would like to contribute directly to RIA, you will be invited to sign a contributor 
-agreement, email us at [info@qoherent.ai](info@qoherent.ai) for more information.
+We welcome contributions from the community! Whether it's an enhancement, bug fix, or new how-to guide, your 
+input is valuable. To get started, please visit our [Contribution Guidelines](./.github/CONTRIBUTING.md).
 
-If you have a larger project in mind, please [contact us](https://www.qoherent.ai/contact/) directly,
-we'd love to collaborate with you. 🚀
+If you encounter any issues or to report a security vulnerability, please submit a [bug report](https://github.com/qoherent/ria/issues/new/choose).
 
-If you are having issues, please let us know by posting the issue on our GitHub issue tracker 
-[here](https://github.com/qoherent/ria/issues).
+If you have a larger project in mind, please [contact us](https://www.qoherent.ai/contact/) directly, we'd love to collaborate with you. 🚀
 
-Qoherent is dedicated to fostering a friendly, safe, and inclusive environment for everyone.
-Kindly review and adhere to our [Code of Conduct](.github/CODE_OF_CONDUCT.md).
+Qoherent is dedicated to fostering a friendly, safe, and inclusive environment for everyone. For more information on
+our commitment to diversity, please refer to our [Diversity Statement](./DIVERSITY_STATEMENT.md). 
+
+We kindly insist that all contributors review and adhere to our [Code of Conduct](.github/CODE_OF_CONDUCT.md) and that all code contributors 
+review our [Coding Guidelines](.github/CODING.md)
 
 
 ## 🖊️ Authorship
@@ -166,7 +169,7 @@ Kindly review and adhere to our [Code of Conduct](.github/CODE_OF_CONDUCT.md).
 RIA Core is developed and maintained by [Qoherent](https://www.qoherent.ai/), with the invaluable support of 
 [many independent contributors](https://github.com/qoherent/ria/graphs/contributors).
 
-If you are doing research with RIA, please cite our project:
+If you are doing research with RIA, please cite the project:
 
 > [1] Qoherent Inc., "Radio Intelligence Apps," 2024. [Online]. Available: https://github.com/qoherent/ria
 
