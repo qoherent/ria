@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ria"
-version = "0.1.0"
+version = "0.1.2"
 description = "Let's build intelligent radios together. 📡🚀"
 readme = "README.md"
 license = "Proprietary"
@@ -30,7 +30,10 @@ classifiers = [
   "Topic :: Scientific/Engineering :: Artificial Intelligence",
   "Typing :: Typed"
 ]
-
+packages = [
+    { include = "ria" },
+    { include = "ria_cli" },
+]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -41,6 +44,7 @@ python = "^3.10"
 numpy = "^1.26.3"
 matplotlib = "^3.8.2"
 torch = "^2.2.0"
+click = "^8.1.7"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.0.0"
@@ -51,6 +55,9 @@ sphinx-rtd-theme = "^2.0.0"
 
 [tool.poetry.urls]
 "Qoherent" = "https://www.qoherent.ai/"
-"Documentation" = ""
+"Documentation" = "http://docs.radiointelligence.io/"
 "Source" = "https://github.com/qoherent/ria"
 "Issues" = "https://github.com/qoherent/ria/issues"
+
+[tool.poetry.scripts]
+ria = "ria_cli.cli:cli"
