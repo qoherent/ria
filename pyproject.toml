@@ -30,6 +30,10 @@ classifiers = [
   "Topic :: Scientific/Engineering :: Artificial Intelligence",
   "Typing :: Typed"
 ]
+packages = [
+    { include = "ria" },
+    { include = "ria_cli" },
+]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -40,8 +44,6 @@ python = "^3.10"
 numpy = "^1.26.3"
 matplotlib = "^3.8.2"
 torch = "^2.2.0"
-
-[tool.poetry.group.scripts.dependencies]
 click = "^8.1.7"
 
 [tool.poetry.group.test.dependencies]
@@ -58,4 +60,4 @@ sphinx-rtd-theme = "^2.0.0"
 "Issues" = "https://github.com/qoherent/ria/issues"
 
 [tool.poetry.scripts]
-ria = "scripts.ria_cli:ria_cli"
+ria = "ria_cli.cli:cli"
