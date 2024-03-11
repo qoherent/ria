@@ -27,7 +27,7 @@ All contributions must be well documented, with ample inline comments and with a
 docstrings. Please refer to our [documentation guidelines](#documentation-guidelines) for more information.
 
 RIA Core's command-line interface (CLI) is powered by [Click](https://click.palletsprojects.com/en/8.1.x/). Each command should be placed in its respective 
-package's `commands.py` file in the `scripts` directory. By applying the `click.command` decorator, the command is 
+package's `commands.py` file in the `ria_cli` directory. By applying the `click.command` decorator, the command is 
 automatically integrated into the RIA CLI.
 
 ### Python-specific guidelines
@@ -102,14 +102,15 @@ sphinx-autobuild ./source ./build/html
 ```
 
 
-3. A working copy of the docs will now be available at http://localhost:8000/, and any changes made to the source 
-code or configurations will be automatically reflected there.
+3. A working copy of the docs will now be available at http://localhost:8000/. Any changes made to the 
+configurations in the [`docs/source`](https://github.com/qoherent/ria/tree/main/docs/source) directory will be automatically reflected there. Docstring changes 
+will be automatically reflected for all components with corresponding `automodule` directives.
 
-
-**Important:** if you've added new modules, you may need to execute `sphinx-apidoc -o ./source ../ria` (from 
-within the `docs` directory) and manually update the `index.rst` files to include links to any the new 
-pages. More information on how we use sphinx-apidoc to auto-generate documentation from the docstrings can be 
-found [here](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/build-the-docs.html#generating-documentation-from-docstrings).
+**Important:** Upon added new components, ensure to include corresponding `automodule` directives to the `.rst` files 
+located in the [`docs/source`](https://github.com/qoherent/ria/tree/main/docs/source) directory. This can be done automatically using [`sphinx-apidoc`](https://www.sphinx-doc.org/en/master/man/sphinx-apidoc.html): simply 
+execute `sphinx-apidoc -o ./source ../ria` from within the `docs` directory. Additionally, manually update
+the `index.rst` files to include links to any the new pages. More information on how to use `sphinx-apidoc` to 
+auto-generate documentation from the docstrings can be found [here](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/build-the-docs.html#generating-documentation-from-docstrings).
 
 
 ## Our development process

@@ -3,7 +3,7 @@
 design notes.]
 
 
-**Related Issue:**
+**Related Issues:**
 [Please reference any issues being addressed by this pull request, as well as any related issues.]
 
 
