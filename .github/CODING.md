@@ -27,7 +27,7 @@ All contributions must be well documented, with ample inline comments and with a
 docstrings. Please refer to our [documentation guidelines](#documentation-guidelines) for more information.
 
 RIA Core's command-line interface (CLI) is powered by [Click](https://click.palletsprojects.com/en/8.1.x/). Each command should be placed in its respective 
-package's `commands.py` file in the `scripts` directory. By applying the `click.command` decorator, the command is 
+package's `commands.py` file in the `ria_cli` directory. By applying the `click.command` decorator, the command is 
 automatically integrated into the RIA CLI.
 
 ### Python-specific guidelines
