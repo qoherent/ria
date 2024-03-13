@@ -23,6 +23,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install poetry
           poetry install --with tests
+          poetry lock --no-update
   
       - name: Run tests
         run: poetry run pytest
