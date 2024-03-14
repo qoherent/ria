@@ -27,10 +27,11 @@ jobs:
           pip install poetry
           poetry lock --no-update
           poetry install --with test
+          pip install pytest
+          pip install pytest-cov
       
       - name: Run tests and collect coverage
-        run: | 
-          pytest --cov app
+        run: pytest --cov app
   
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
