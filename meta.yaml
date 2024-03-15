@@ -32,6 +32,7 @@ build:
 requirements:
   host:
     - python
+    - poetry
     - pip
   run:
     # Confirm that all the runtime dependencies are listed here, and then
@@ -39,7 +40,7 @@ requirements:
     # [tool.poetry.dependencies] section in pyproject.toml.
     - python >=3.10.0,<4.0.0
     - numpy >=1.26.3,<2.0.0
-    - matplotlib-base >=3.8.2,<4.0.0
+    - matplotlib-base >=3.8.0,<4.0.0
     - pytorch >=2.2.0,<3.0.0
     - click >=8.1.7,<9.0.0
 
