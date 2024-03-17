@@ -70,9 +70,14 @@ empowering radio engineers to leverage AI for sensing and communications.
 
 ## 🛠️ Getting Started
 
-RIA Core is available at [PyPI](https://pypi.org/project/ria), and can be installed with pip:
+RIA Core is available from [PyPI](https://pypi.org/project/ria), and can be installed with pip:
 ```sh
 pip install ria
+```
+
+RIA Core is also available from [Conda-Forge](https://anaconda.org/conda-forge/ria), and can be installed with Conda:
+```sh
+conda install ria
 ```
 
 Interfacing with your local SDR hardware may require additional drivers and configurations.
