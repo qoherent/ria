@@ -9,6 +9,19 @@
       font-weight: 300;  
     }
 
+    * span.pre {
+      font-size: 14px;
+      font-weight: normal;
+    }
+
+    .wy-nav-content:not(:has(section)) {
+      max-width: 1200px;
+    }
+
+    .rst-content div[class^=highlight] pre {
+      font-size: 14px;
+    }
+
     nav ul.current li, nav ul li.current, nav ul.current li.current, [aria-expanded="true"] {
       background-color: #1c1c1c;
       color: #f0f0f0;
@@ -71,6 +84,8 @@
     .wy-menu code.docutils.literal.notranslate span {
       color: #f0f0f0;
       background-color: transparent;
+      font-size: 11.96px;
+      text-decoration: none;
     }
 
     .wy-menu-vertical a {
@@ -129,6 +144,13 @@
       font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,liberation mono,courier new,monospace;
       font-feature-settings: normal;
       font-variation-settings: normal;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      color: #fff;
+    }
+
+    code.xref.py.py-obj.docutils.literal.notranslate:hover, code.xref.py.py-class.docutils.literal.notranslate:hover {
+      text-decoration: none;
     }
 
     .sig span.pre, .sig span.viewcode-link {
@@ -136,6 +158,7 @@
       font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,liberation mono,courier new,monospace;
       font-feature-settings: normal;
       font-variation-settings: normal;
+      text-decoration: none;
     }
 
     @media screen and (max-width: 550px) {
@@ -254,35 +277,93 @@
 
     .highlight pre span {
       font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,liberation mono,courier new,monospace;
+      font-weight: normal;
     }
 
     .highlight pre span.o {
       color: #f92672;
+      font-weight: normal;
     }
 
     .highlight pre span.kn {
       color: #f92672;
+      font-weight: normal;
     }
 
     .highlight pre span.s2 {
       color: #E6DB74;
+      font-weight: normal;
     }
 
     .highlight pre span.c1 {
       color: #75715E;
+      font-weight: normal;
     }
 
     .highlight pre span.mi {
       color: #AE81FF;
+      font-weight: normal;
     }
 
     .highlight pre span.nn {
       color: #f0f0f0;
+      font-weight: normal;
+    }
+
+    .highlight .k {
+      color: #66d9ef;
+      font-weight: normal;
+    }
+
+    .highlight .sd {
+      color: #e6db74;
+      font-weight: normal;
+    }
+
+    .highlight .nc, .highlight .fm, .highlight .nd, .highlight .nf, .highlight .ne{
+      color: #a6e22e;
+      font-weight: normal;
+    }
+
+    .highlight .ow {
+      color: #f92672;
+      font-weight: normal;
+    }
+
+    .highlight .kc {
+      color: #66d9ef;
+      font-weight: normal;
+    }
+
+    .highlight .nb, .highlight .bp, .highlight .vm {
+      color: #f0f0f0;
+      font-weight: normal;
     }
 
     html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.citation):not(.glossary):not(.simple)>dt {
       display: block;
     }
+
+    
+    html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.citation):not(.glossary):not(.simple)>dt, html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.citation):not(.glossary):not(.simple) dl:not(.option-list):not(.field-list):not(.footnote):not(.citation):not(.glossary):not(.simple)>dt {
+      border-top: 2px solid #03A9F4;
+      border-radius: 2px;
+      background: #414040;
+      color: #03A9F4;
+    }
+
+    html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.citation):not(.glossary):not(.simple) dl:not(.option-list):not(.field-list):not(.footnote):not(.citation):not(.glossary):not(.simple)>dt {
+      border-top: none;
+    }
+
+    html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.citation):not(.glossary):not(.simple)>dt span.pre, .sig span.sig-paren {
+      color: #fff;
+    }
+
+    html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.citation):not(.glossary):not(.simple)>dt .headerlink {
+      color: #fff;
+    }
+
 
   </style>
 {% endblock %}

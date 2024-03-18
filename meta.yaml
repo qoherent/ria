@@ -1,0 +1,73 @@
+# To release a new version of RIA Core on Conda-Forge, please update this
+# recipe by addressing the below comments. Please refrain from versioning
+# any updates to this file unless they are expected to persist across all
+# or many future releases. Please remember to remove all comments prior
+# to staging this recipe.
+{% set name = "ria" %}
+# Enter the version number below, and then remove this comment. Please
+# use the version identifier of the release you want to upload to Conda-Forge,
+# which is not necessarily the current version indicated in pyproject.toml.
+# E.g., {% set version = "0.1.2" %}
+{% set version = "..." %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ria-{{ version }}.tar.gz
+  # Copy the SHA256 **source** distribution hash from PyPI: https://pypi.org/project/ria/#files,
+  # paste it below, and then remove this comment. Please use the hash corresponding the version
+  # identifier entered above.
+  # E.g., sha256: d32879a4e1b3e102fc5d65338f623764fbfb197570e536a5dfd57197aeec74c5
+  sha256: ...
+
+build:
+  number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
+  entry_points:
+    - ria = ria_cli.cli:cli
+
+requirements:
+  host:
+    - python
+    - poetry
+    - pip
+  run:
+    # Confirm that all the runtime dependencies are listed here, and then
+    # remove this comment. Please include all dependencies within the
+    # [tool.poetry.dependencies] section in pyproject.toml.
+    - python >=3.10.0,<4.0.0
+    - numpy >=1.26.3,<2.0.0
+    - matplotlib-base >=3.8.0,<4.0.0
+    - pytorch >=2.2.0,<3.0.0
+    - click >=8.1.7,<9.0.0
+
+test:
+  imports:
+    - ria
+  commands:
+    - pip check
+    - ria --help
+  requires:
+    - pip
+
+about:
+  home: https://github.com/qoherent/ria
+  summary: Radio Intelligence Apps' open-source core, by Qoherent 📡🚀
+  description: |
+    RIA Core is the foundational, open-source core of RIA Hub, an extensive AI 
+    development platform tailored for software-defined radio (SDR). RIA Core 
+    drives the creation of intelligent radios, unlocking solutions in an increasingly 
+    congested, contested, and complex wireless spectrum.
+  license: AGPL-3.0-or-later
+  license_file: LICENSE
+  dev_url: https://github.com/qoherent/ria
+  doc_url: http://docs.radiointelligence.io/
+
+extra:
+  recipe-maintainers:
+    # Ensure there are at least 2 maintainers listed, notify all maintainers
+    # of your intent to publish, and then remove this comment.
+    - mrl280
