@@ -12,12 +12,6 @@
     * span.pre {
       font-size: 14px;
       font-weight: normal;
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-
-    * span.pre:hover {
-      text-decoration: none;
     }
 
     .wy-nav-content:not(:has(section)) {
@@ -150,6 +144,13 @@
       font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,liberation mono,courier new,monospace;
       font-feature-settings: normal;
       font-variation-settings: normal;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      color: #fff;
+    }
+
+    code.xref.py.py-obj.docutils.literal.notranslate:hover, code.xref.py.py-class.docutils.literal.notranslate:hover {
+      text-decoration: none;
     }
 
     .sig span.pre, .sig span.viewcode-link {
@@ -362,7 +363,7 @@
     html.writer-html5 .rst-content dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.citation):not(.glossary):not(.simple)>dt .headerlink {
       color: #fff;
     }
-    
+
 
   </style>
 {% endblock %}
