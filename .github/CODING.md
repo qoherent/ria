@@ -12,7 +12,7 @@ To ensure smooth development, reduce frustration, and minimize conflicts, we kin
 contributions must adhere to these guidelines.
 
 Think there's a better approach? We encourage challenges and discussions to continuously enhance and 
-refine our approach. You're welcome to present your ideas and rationale on our [ideas forum](https://github.com/qoherent/michael/discussions/categories/ideas).
+refine our approach. You're welcome to present your ideas and rationale on our [ideas forum](https://github.com/qoherent/ria/discussions/categories/ideas).
 
 ### General guidelines
 
