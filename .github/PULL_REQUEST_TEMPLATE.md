@@ -1,6 +1,6 @@
 **Description:**
-[Provide a clear and concise description of the changes and their purpose. Please include any relevant screenshots or
-design notes.]
+[Provide a clear and concise description of the changes and their purpose. Please include any relevant 
+screenshots or design notes.]
 
 
 **Related Issues:**
@@ -8,8 +8,8 @@ design notes.]
 
 
 **Outstanding Sub-Issues:**
-[If there are any outstanding sub-issues or parts of the addressed issues that have not yet been wholly addressed by
-this pull request, please describe them here.]
+[If there are any outstanding sub-issues or parts of the addressed issues that have not yet been wholly addressed 
+by this pull request, please describe them here.]
 
 
 **Tips for the Reviewer:**
@@ -31,12 +31,12 @@ or whose authorship we cannot verify, may not be accepted.
 - [ ] I have included unit tests for my code contributions, and all tests are passing.
 - [ ] The docstrings are complete, include doctests demonstrating usage, and are properly formatted. 
 I have verified that any updates to the project documentation are complete and look okay.
-- [ ] I have confirmed all my code contributions are formatted in accordance with the project's Flake8 style 
-configuration.
+- [ ] I have confirmed all my code contributions are formatted in accordance with the project's Flake8, Black, 
+and isort style configurations.
 - [ ] No unnecessary changes have been made to the Poetry lock file, but `pyproject.toml` and the Poetry lock file 
 have been updated to reflect any dependency changes.
 - [ ] I acknowledge that upon the submission of this pull request, Qoherent will assume the copyright for this 
 contribution.
 
-A heartfelt thank you from everyone at Qoherent and the broader radio community for taking the time to contribute to 
-RIA Core. 🙏💖
+<!-- A heartfelt thank you from everyone at Qoherent and the broader radio community for taking the time to 
+contribute to RIA Core. 🙏💖 -->

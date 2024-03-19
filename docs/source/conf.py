@@ -2,6 +2,7 @@
 
 import os
 import sys
+
 sys.path.insert(0, os.path.abspath(os.path.join('..', '..')))
 
 # -- Project information -----------------------------------------------------
@@ -21,6 +22,8 @@ extensions = [
 ]
 
 autodoc_typehints = "none"
+
+html_favicon = 'branding/riacore.png'
 
 autodoc_typehints_format = "short"
 python_use_unqualified_type_names = True

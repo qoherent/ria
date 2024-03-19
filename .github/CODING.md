@@ -12,7 +12,7 @@ To ensure smooth development, reduce frustration, and minimize conflicts, we kin
 contributions must adhere to these guidelines.
 
 Think there's a better approach? We encourage challenges and discussions to continuously enhance and 
-refine our approach. You're welcome to present your ideas and rationale on our [ideas forum](https://github.com/qoherent/michael/discussions/categories/ideas).
+refine our approach. You're welcome to present your ideas and rationale on our [ideas forum](https://github.com/qoherent/ria/discussions/categories/ideas).
 
 ### General guidelines
 
@@ -32,9 +32,15 @@ automatically integrated into the RIA CLI.
 
 ### Python-specific guidelines
 
-We use [Flake8](https://flake8.pycqa.org/en/latest/) for code linting and style enforcement. All Python code must 
-be formatted in accordance with the Flake8 configuration settings defined in the [tox.ini](../tox.ini) file 
-in the root of the project.
+We utilize [Black](https://black.readthedocs.io/en/stable/) for automated code formatting, with configuration 
+settings defined in `pyproject.toml`. Please ensure that all code contributions are auto-formatted with Black, 
+this is important to ensure consistent and reliably formatted code.
+
+We rely on [isort](https://pycqa.github.io/isort/index.html) for import sorting, with configuration settings defined 
+in `pyproject.toml`. Please use isort to automatically organize your import statements.
+
+We use [Flake8](https://flake8.pycqa.org/en/latest/) for code linting and style. All Python code must be formatted in accordance with the Flake8 
+configuration settings defined in [tox.ini](../tox.ini).
 
 To ensure a consistent development environment, this project uses [Poetry](https://python-poetry.org/) for dependency management. 
 [Start here](https://python-poetry.org/docs/basic-usage/) for information on basic Poetry usage. Please refrain from making unnecessary updates to the 
@@ -195,8 +201,10 @@ poetry run pytest
 ```
 
 
-4. Confirm your changes are formatted in accordance with our Flake8 style configuration:
+4. Confirm your changes are formatted in accordance with our Black, isort, and Flake8 style configurations:
 ```commandline
+black .
+isort .
 flake8 .
 ```
 
