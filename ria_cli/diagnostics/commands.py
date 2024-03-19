@@ -1,6 +1,7 @@
 """
 This module contains all the CLI bindings for the diagnostics package.
 """
+
 import click
 
 from ria import print_version_info as print_version_info

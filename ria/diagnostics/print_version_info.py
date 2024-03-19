@@ -4,16 +4,16 @@ information.
 
 This module draws inspiration from Pandas' util._print_versions.py module.
 """
+
 import locale
 import os
 import platform
 import struct
 import sys
+from importlib.metadata import PackageNotFoundError, version
+from typing import Any
 
 import torch
-
-from importlib.metadata import version, PackageNotFoundError
-from typing import Any
 
 
 def print_version_info() -> None:
@@ -51,7 +51,7 @@ def print_version_info() -> None:
 
 
 def _get_sys_info() -> dict[str, Any]:
-    """ :return: A dictionary of relevant system information. """
+    """:return: A dictionary of relevant system information."""
     uname_result = platform.uname()
     language_code, encoding = locale.getlocale()
 
@@ -72,28 +72,22 @@ def _get_sys_info() -> dict[str, Any]:
 
 
 def _get_cuda_info() -> dict[str, Any]:
-    """:return: A dictionary of relevant cuda information. """
+    """:return: A dictionary of relevant cuda information."""
     if torch.cuda.is_available():
         return {
             "available": True,
             "device": torch.cuda.get_device_name(0),
             "version": torch.version.cuda,
             "count": torch.cuda.device_count(),
-            "index": torch.version.cuda
+            "index": torch.version.cuda,
         }
 
     else:
-        return {
-            "available": False,
-            "device": None,
-            "version": None,
-            "count": None,
-            "index": None
-        }
+        return {"available": False, "device": None, "version": None, "count": None, "index": None}
 
 
 def _get_dependency_info() -> dict[str, Any]:
-    """:return: A dictionary containing project dependencies along with their respective version numbers. """
+    """:return: A dictionary containing project dependencies along with their respective version numbers."""
     deps = [
         # required:
         "matplotlib",
