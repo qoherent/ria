@@ -11,7 +11,8 @@ on:
 jobs: 
   run: 
     runs-on: ubuntu-latest
-    
+  
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -29,9 +30,11 @@ jobs:
           poetry install --with test
           pip install pytest
           pip install pytest-cov
-      
+        
       - name: Run tests and collect coverage
-        run: pytest --cov
+        run: pytest --cov tests
   
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
+        with:
+          fail_ci_if_error: false
