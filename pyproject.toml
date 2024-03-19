@@ -3,7 +3,7 @@ name = "ria"
 version = "0.1.2"
 description = "Let's build intelligent radios together. 📡🚀"
 readme = "README.md"
-license = "Proprietary"
+license = "AGPL-3.0-or-later"
 keywords = [
   "cognitive radio",
   "intelligent radio",
@@ -18,7 +18,7 @@ authors = [
 maintainers = [
   "Ashkan Beigi <ash@qoherent.ai>",
   "Michael Luciuk <michael@qoherent.ai>",
-  "Alec Digby <alec@qoherent.ai>",
+  "Alec Digby <alec@qoherent.ai>"
 ]
 classifiers = [
   "Development Status :: 2 - Pre-Alpha",
@@ -31,8 +31,8 @@ classifiers = [
   "Typing :: Typed"
 ]
 packages = [
-    { include = "ria" },
-    { include = "ria_cli" },
+  { include = "ria" },
+  { include = "ria_cli" }
 ]
 
 [build-system]
@@ -54,6 +54,11 @@ sphinx = "^7.2.6"
 sphinx-rtd-theme = "^2.0.0"
 sphinx-autobuild = "^2024.2.4"
 
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.0.0"
+black = "^24.3.0"
+isort = "^5.13.2"
+
 [tool.poetry.urls]
 "Qoherent" = "https://www.qoherent.ai/"
 "Documentation" = "http://docs.radiointelligence.io/"
@@ -62,3 +67,25 @@ sphinx-autobuild = "^2024.2.4"
 
 [tool.poetry.scripts]
 ria = "ria_cli.cli:cli"
+
+[tool.black]
+line-length = 119
+target-version = ["py310", "py311", "py312"]
+exclude = '''
+    /(
+          \.git
+        | \.github
+        | build
+        | dist
+        | docs
+        | venv
+        | \.venv
+        | env
+        | \.env
+        | \.idea
+        | \.vscode
+    )/
+'''
+
+[tool.isort]
+profile = "black"

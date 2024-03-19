@@ -4,17 +4,16 @@ information.
 
 This module draws inspiration from Pandas' util._print_versions.py module.
 """
+
 import locale
 import os
 import platform
 import struct
 import sys
+from importlib.metadata import PackageNotFoundError, version
+from typing import Any
 
 import torch
-import subprocess
-
-from importlib.metadata import version, PackageNotFoundError
-from typing import Any
 
 
 def print_version_info() -> None:
@@ -26,11 +25,12 @@ def print_version_info() -> None:
     :return: None
     """
     print(f"\nRIA Core Version: {version('ria')}")
+    print(f"Python Version: {platform.python_version()}")
 
     sys_info = _get_sys_info()
     cuda_info = _get_cuda_info()
     dependency_info = _get_dependency_info()
-    max_len = 15
+    max_len = 20
 
     print("\nSYSTEM")
     print("------")
@@ -51,7 +51,7 @@ def print_version_info() -> None:
 
 
 def _get_sys_info() -> dict[str, Any]:
-    """ :return: A dictionary of relevant system information. """
+    """:return: A dictionary of relevant system information."""
     uname_result = platform.uname()
     language_code, encoding = locale.getlocale()
 
@@ -72,40 +72,43 @@ def _get_sys_info() -> dict[str, Any]:
 
 
 def _get_cuda_info() -> dict[str, Any]:
-    """:return: A dictionary of relevant cuda information. """
+    """:return: A dictionary of relevant cuda information."""
     if torch.cuda.is_available():
         return {
             "available": True,
             "device": torch.cuda.get_device_name(0),
             "version": torch.version.cuda,
             "count": torch.cuda.device_count(),
-            "index": torch.version.cuda
+            "index": torch.version.cuda,
         }
 
     else:
-        return {
-            "available": False,
-            "device": None,
-            "version": None,
-            "count": None,
-            "index": None
-        }
+        return {"available": False, "device": None, "version": None, "count": None, "index": None}
 
 
 def _get_dependency_info() -> dict[str, Any]:
-    """:return: A dictionary containing project dependencies along with their respective version numbers. """
+    """:return: A dictionary containing project dependencies along with their respective version numbers."""
     deps = [
         # required:
         "matplotlib",
         "torch",
+        "numpy",
+        "pandas",
+        "click",
         "dateutil",
         # install/build:
-        "poetry"
+        "poetry",
         "pip",
         # test:
         "pytest",
         # docs:
         "sphinx",
+        "sphinx-rtd-theme",
+        "sphinx-autobuild",
+        # dev:
+        "flake8",
+        "black",
+        "isort",
         # other:
     ]
 
@@ -126,8 +129,6 @@ def _get_commit_hash() -> str:
 
     :raises RuntimeError: If Git is not installed or not accessible from the command line.
     """
-    try:
-        return subprocess.check_output(['git', 'rev-parse', 'HEAD']).strip().decode('utf-8')
-    except subprocess.CalledProcessError as e:
-        raise RuntimeError("Unable to determine commit hash. Please ensure that Git is "
-                           "installed and accessible from the command line.", e.output)
+    # TODO: Find the Git hash. Note that spawning a subprocess with the command `git rev-parse HEAD` won't work
+    #  outside of the 'ria' development directory. Instead, we need to scrape it from the installed package itself.
+    return "COULD NOT RESOLVE"
