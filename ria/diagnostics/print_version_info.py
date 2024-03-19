@@ -11,7 +11,6 @@ import struct
 import sys
 
 import torch
-import subprocess
 
 from importlib.metadata import version, PackageNotFoundError
 from typing import Any
@@ -26,11 +25,12 @@ def print_version_info() -> None:
     :return: None
     """
     print(f"\nRIA Core Version: {version('ria')}")
+    print(f"Python Version: {platform.python_version()}")
 
     sys_info = _get_sys_info()
     cuda_info = _get_cuda_info()
     dependency_info = _get_dependency_info()
-    max_len = 15
+    max_len = 20
 
     print("\nSYSTEM")
     print("------")
@@ -98,14 +98,23 @@ def _get_dependency_info() -> dict[str, Any]:
         # required:
         "matplotlib",
         "torch",
+        "numpy",
+        "pandas",
+        "click",
         "dateutil",
         # install/build:
-        "poetry"
+        "poetry",
         "pip",
         # test:
         "pytest",
         # docs:
         "sphinx",
+        "sphinx-rtd-theme",
+        "sphinx-autobuild",
+        # dev:
+        "flake8",
+        "black",
+        "isort",
         # other:
     ]
 
@@ -126,8 +135,6 @@ def _get_commit_hash() -> str:
 
     :raises RuntimeError: If Git is not installed or not accessible from the command line.
     """
-    try:
-        return subprocess.check_output(['git', 'rev-parse', 'HEAD']).strip().decode('utf-8')
-    except subprocess.CalledProcessError as e:
-        raise RuntimeError("Unable to determine commit hash. Please ensure that Git is "
-                           "installed and accessible from the command line.", e.output)
+    # TODO: Find the Git hash. Note that spawning a subprocess with the command `git rev-parse HEAD` won't work
+    #  outside of the 'ria' development directory. Instead, we need to scrape it from the installed package itself.
+    return "COULD NOT RESOLVE"
