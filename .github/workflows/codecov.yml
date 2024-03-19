@@ -31,8 +31,7 @@ jobs:
           pip install pytest-cov
       
       - name: Run tests and collect coverage
-        run: pytest --cov app
-        pytest test_dummy.py  # Add this line to run dummy tests
+        run: pytest --cov ./
   
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
