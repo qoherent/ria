@@ -76,6 +76,7 @@ exclude = '''
     /(
           \.git
         | \.github
+        | .tox
         | build
         | dist
         | docs
