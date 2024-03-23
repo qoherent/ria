@@ -15,7 +15,7 @@ jobs:
       - name: Check out 
         uses: actions/checkout@v3
     
-      - name: 
+      - name: Annotate PR with Sphinx Docs Build
         uses: ammaraskar/sphinx-action@master
         with:
-          docs-folder: "docs/source"
+          docs-folder: "docs"
