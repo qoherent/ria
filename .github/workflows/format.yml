@@ -41,6 +41,3 @@ jobs:
 
         - name: Link and annotate with Flake8
           uses: py-actions/flake8@v2
-          with:
-            ignore: "E203, E701" # Will add F401 to ignore list after testing
-            max-line-length: "119"
