@@ -43,6 +43,5 @@ jobs:
           uses: py-actions/flake8@v2
           with:
             ignore: "E203, E701" # Will add F401 to ignore list after testing
-            exclude: ".git, .github, build, dist, docs, venv, .venv, env, .env, .idea, .vscode"
             max-line-length: "119"
             path: "./"
