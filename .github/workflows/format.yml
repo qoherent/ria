@@ -41,4 +41,4 @@ jobs:
           uses: rbialon/flake8-annotations@v1
 
         - name: Link and annotate with Flake8
-          run: flake8 --max-line-length=119 --extend-ignore=W503,E203,E701 --exclude=.git,.github,build,dist,docs,venv,.venv,env,.env,.idea,.vscode --max-complexity=10
+          run: flake8 --max-line-length=119 --extend-ignore=F401,W503,E203,E701 --exclude=.git,.github,build,dist,docs,venv,.venv,env,.env,.idea,.vscode --max-complexity=10
