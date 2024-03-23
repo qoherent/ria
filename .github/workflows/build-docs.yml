@@ -1,0 +1,21 @@
+name: "Docs Build Successfully on PR Check"
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out 
+        uses: actions/checkout@v3
+    
+      - name: 
+        uses: ammaraskar/sphinx-action@master
+        with:
+          docs-folder: "docs/source"
