@@ -12,11 +12,8 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out 
-        uses: actions/checkout@v3
-
-      - name: Annotate PR with Sphinx Docs Build
-        uses: ammaraskar/sphinx-action@master
-        with:
+       - uses: actions/checkout@v3
+       - uses: ammaraskar/sphinx-action@0.4
+         with:
           docs-folder: "docs"
           pre-build-command: pip install -U sphinx sphinx-rtd-theme
