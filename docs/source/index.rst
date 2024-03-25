@@ -9,7 +9,7 @@
 
    <p style="text-align:center;">by</p>
 
-.. figure:: branding/logo-dark.pn
+.. figure:: branding/logo-dark.png
    :scale: 130%
    :alt: Qoherent
    :align: center
