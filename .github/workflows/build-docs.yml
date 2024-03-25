@@ -17,7 +17,6 @@ jobs:
          with:
           docs-folder: "docs/"
           pre-build-command: pip install -U sphinx sphinx-rtd-theme
-          build-command: sphinx-build -b html . build/html
        - uses: actions/upload-artifact@v3
          with:
           name: UserGuideHTML
