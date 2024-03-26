@@ -1,5 +1,5 @@
 def test_dummy():
-    assert True
+    assert True #test: no cover
 
 def test_another_dummy():
     assert False, "This test intentionally fails"
