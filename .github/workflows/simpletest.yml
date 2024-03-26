@@ -1,0 +1,22 @@
+name: Code Coverage [CodeCov]
+
+on: [ push ]
+
+jobs:
+  codecov:
+    runs-on: ubuntu-latest
+    name: CodeCov
+    steps:
+      ##########   CHECK OUT REPO AND DOWNLOAD PACKAGES AND RUN COVERAGE & CODECOV #######
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install poetry and python packages
+        run: |
+          pip install poetry pyfiglet
+          poetry config virtualenvs.create false
+          poetry install
+          pyfiglet Continuous Integration
+      - name: Run Coverage
+        run: coverage run simple_loop.py
+      - name: Run CodeCov
+        run: codecov --token=d847a5c6-9754-4006-90b6-d5105765ac6e
