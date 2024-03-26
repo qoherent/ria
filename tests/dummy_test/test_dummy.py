@@ -1,8 +1,10 @@
 def test_dummy():
+
     assert True #test: no cover
 
 # def test_another_dummy():
 #     assert False, "This test intentionally fails"
+
 
 def test_addition():
     assert 1 + 1 == 2

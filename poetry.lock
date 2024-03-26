@@ -1302,6 +1302,7 @@ coverage = {version = ">=5.2.1", extras = ["toml"]}
 pytest = ">=4.6"
 
 [package.extras]
+
 testing = ["fields", "hunter", "process-tests", "pytest-xdist", "six", "virtualenv"]
 
 [[package]]
@@ -1718,4 +1719,6 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "60674eb6409f9830d7a037961f224ec0bd0c8ca50c0fb011d3053d8d221e6153"
+
+content-hash = "245dd18c22fa624b400ecfc213b238322eb76e1699e127271338130415087736"
+

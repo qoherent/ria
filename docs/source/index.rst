@@ -2,7 +2,9 @@
    :scale: 75%
    :alt: RIA Core
    :align: center
-
+   :height: 315px
+   :width: 2000px
+   
 |
 
 .. raw:: html
