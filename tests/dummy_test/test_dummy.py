@@ -1,5 +1,3 @@
-from ria.diagnostics.print_version_info import print_version_info
-
 def test_dummy():
     assert True
 
