@@ -1,0 +1,43 @@
+name: Build-codecov-docs
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs: 
+  run: 
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+    
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install poetry
+          poetry lock --no-update
+          poetry install --with test
+          pip install pytest
+          pip install pytest-cov
+        
+      - name: Run tests and collect coverage
+        run: pytest --cov tests
+  
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          env_vars: OS,PYTHON
+          files: ./coverage.xml
+          name: Coverage Report with codecov overview
+          fail_ci_if_error: true
+          verbose: true
