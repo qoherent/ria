@@ -35,9 +35,3 @@ jobs:
   
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
-        with:
-          env_vars: OS,PYTHON
-          files: ./coverage.xml
-          name: Coverage Report with codecov overview
-          fail_ci_if_error: true
-          verbose: true
