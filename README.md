@@ -21,7 +21,7 @@
     <img src="https://img.shields.io/pypi/status/ria"/>
   </a>
   <!-- Docs -->
-  <a href="http://radiointelligence.io/">
+  <a href="https://radiointelligence.io/">
     <img src="https://img.shields.io/badge/docs-ria--core-blue"/>
   </a>
 </p>
@@ -82,7 +82,7 @@ conda install ria
 
 Interfacing with your local SDR hardware may require additional drivers and configurations.
 
-Please refer to the [documentation](http://radiointelligence.io/) for more information on getting
+Please refer to the [documentation](https://radiointelligence.io/) for more information on getting
 started with RIA Core.
 
 
@@ -150,7 +150,7 @@ lte_nr_classifier.to_onnx("models/classifier.onnx")
 If RIA's syntax feels familiar, that's because RIA is built on [PyTorch](https://pytorch.org/docs/stable/data.html) 
 and [PyTorch Lightning](https://lightning.ai/docs/pytorch/stable/)! 
 
-Please refer to the [documentation](http://radiointelligence.io/) for additional usage examples. If you 
+Please refer to the [documentation](https://radiointelligence.io/) for additional usage examples. If you 
 encounter any difficulties, don't hesitate to reach out on our open [support forum](https://github.com/qoherent/ria/discussions/categories/support).
 
 Additional back-ends can be made available. Please [contact us](https://www.qoherent.ai/contact/) for further details.
