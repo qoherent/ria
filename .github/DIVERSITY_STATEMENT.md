@@ -11,4 +11,4 @@ all abilities. We welcome feedback and suggestions for improving accessibility t
 Our standards for behaviour are detailed in the project's [Code of Conduct](./CODE_OF_CONDUCT.md). 
 We kindly insist all participants uphold these standards in all their interactions and communications.
 
-Let's build intelligent radios, together! 📡🚀
+Let's build intelligent radios together.™ 📡🚀
