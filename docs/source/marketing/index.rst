@@ -8,5 +8,5 @@ Marketing
    :maxdepth: 2
    :caption: Contents:
 
+   RIA Hub <riahub>
    RIA RAN <riaran>
-   RIA Suite <riasuite>

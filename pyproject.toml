@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "ria"
 version = "0.1.2"
-description = "Let's build intelligent radios together. 📡🚀"
+description = "Radio Intelligence Apps' open-source core, by Qoherent 📡🚀"
 readme = "README.md"
 license = "AGPL-3.0-or-later"
 keywords = [
@@ -62,7 +62,7 @@ isort = "^5.13.2"
 
 [tool.poetry.urls]
 "Qoherent" = "https://www.qoherent.ai/"
-"Documentation" = "http://docs.radiointelligence.io/"
+"Documentation" = "https://radiointelligence.io/"
 "Source" = "https://github.com/qoherent/ria"
 "Issues" = "https://github.com/qoherent/ria/issues"
 

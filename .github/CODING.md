@@ -57,7 +57,7 @@ tests. In the meantime, please format your C code in accordance with [Google's C
 
 ### Documentation guidelines
 
-We use [Sphinx](https://www.sphinx-doc.org/en/master/) to auto-generate the project's [docs](http://docs.radiointelligence.io/). All docstrings must adhere to the 
+We use [Sphinx](https://www.sphinx-doc.org/en/master/) to auto-generate the project's [docs](https://radiointelligence.io/). All docstrings must adhere to the 
 [Sphinx docstring format](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html#the-sphinx-docstring-format).
 
 Types mentioning in the docstring should be expressed in plain English rather than using Python's type hint syntax 
@@ -93,7 +93,7 @@ Please keep your pull requests concise and focused. We recommend limiting your p
 
 ## Building docs
 
-We use [Sphinx](https://www.sphinx-doc.org/en/master/) to auto-generate the project's [docs](http://docs.radiointelligence.io/). When making changes, we use `sphinx-autobuild` to 
+We use [Sphinx](https://www.sphinx-doc.org/en/master/) to auto-generate the project's [docs](https://radiointelligence.io/). When making changes, we use `sphinx-autobuild` to 
 auto-detect these changes. This means you only need to build the docs once, and any changes to the source code or 
 configurations are live-reload in the browser.
 
