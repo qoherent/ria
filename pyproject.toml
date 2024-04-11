@@ -45,10 +45,13 @@ numpy = "^1.26.3"
 matplotlib = "^3.8.0"
 torch = "^2.2.0"
 click = "^8.1.7"
+tqdm = "^4.66.2"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.0.0"
 pytest-cov = "^4.1.0"
+coverage = "^7.4.4"
+codecov = "^2.1.13"
 
 [tool.poetry.group.docs.dependencies]
 sphinx = "^7.2.6"
