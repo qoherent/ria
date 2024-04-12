@@ -14,10 +14,10 @@ jobs:
     name: Flake8 Lint
     steps:
         - name: Check out 
-          uses: actions/checkout@v3
+          uses: actions/checkout@v4
 
         - name: Set up Python environment
-          uses: actions/setup-python@v4
+          uses: actions/setup-python@v5
           with:
             python-version: "3.10"
 
@@ -37,7 +37,7 @@ jobs:
           run: isort .
 
         - name: Setup flake8 annotations
-          uses: rbialon/flake8-annotations@v1
+          uses: rbialon/flake8-annotations@v1.1
 
         - name: Link and annotate with Flake8
           uses: py-actions/flake8@v2
