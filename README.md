@@ -173,7 +173,7 @@ Qoherent is dedicated to fostering a friendly, safe, and inclusive environment f
 our commitment to diversity, please refer to our [Diversity Statement](./DIVERSITY_STATEMENT.md). 
 
 We kindly insist that all contributors review and adhere to our [Code of Conduct](.github/CODE_OF_CONDUCT.md) and that all code contributors 
-review our [Coding Guidelines](.github/CODING.md)
+review our [Coding Guidelines](.github/CODING.md).
 
 
 ## 🖊️ Authorship
