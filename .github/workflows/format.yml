@@ -37,7 +37,7 @@ jobs:
           run: isort .
 
         - name: Setup flake8 annotations
-          uses: rbialon/flake8-annotations@v1
+          uses: rbialon/flake8-annotations@v1.1
 
         - name: Link and annotate with Flake8
           uses: py-actions/flake8@v2
