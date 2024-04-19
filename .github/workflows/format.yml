@@ -38,8 +38,7 @@ jobs:
           with:
             options: "--check --verbose"
             src: "./"
-            use_pyproject: true
-            version: "~= 24.4"
+            # use_pyproject: true, should be used but causing issues so commenting for now
 
         - name: Run Isort
           run: isort .
