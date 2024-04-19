@@ -33,8 +33,18 @@ jobs:
         - name: Run Black
           run: black ./ --config pyproject.toml
 
+        - name: Check Black formatting
+          uses: psf/black@stable
+          with:
+            options: "--check --verbose"
+            src: "./"
+            use_pyproject: true
+
         - name: Run Isort
           run: isort .
+
+        - name: Check Isort formatting
+          uses: isort/isort-action@master
 
         - name: Setup flake8 annotations
           uses: rbialon/flake8-annotations@v1.1
