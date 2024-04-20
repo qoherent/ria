@@ -30,4 +30,4 @@ jobs:
           make html
       - name: Run ghp-import
         run: | 
-          ghp-import -n -p -f docs/build/html
+          ghp-import -n -c radiointelligence.io -p -f docs/build/html
