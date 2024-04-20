@@ -19,7 +19,7 @@ jobs:
         - name: Set up Python environment
           uses: actions/setup-python@v5
           with:
-            python-version: "3.10"
+            python-version: "3.11"
 
         - name: Install dependencies
           run: |
@@ -27,14 +27,15 @@ jobs:
             pip install poetry
             poetry lock --no-update
             poetry install
-            pip install black
-            pip install isort
 
-        - name: Run Black
-          run: black ./ --config pyproject.toml
+        - name: Check Black formatting
+          uses: psf/black@stable
+          with:
+            options: "--check --verbose"
+            src: "./"
 
-        - name: Run Isort
-          run: isort .
+        - name: Check Isort formatting
+          uses: isort/isort-action@master
 
         - name: Setup flake8 annotations
           uses: rbialon/flake8-annotations@v1.1
