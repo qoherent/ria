@@ -3,8 +3,9 @@ name: Build-sphinx-docs
 on:
   push:
     branches: [ main ]
-
-  workflow_dispatch:
+  # Temporary for testing
+  pull_request: 
+      branches: [ main ]
 
 jobs: 
   build: 
