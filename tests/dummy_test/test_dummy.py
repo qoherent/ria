@@ -3,7 +3,7 @@ def test_dummy():
     assert True #test: no cover
 
 def test_another_dummy():
-#     assert False, "This test intentionally fails"
+     assert False, "This test intentionally fails"
 
 #Adding a comment to test 
 
