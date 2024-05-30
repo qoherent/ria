@@ -1,4 +1,6 @@
 coverage:
+    paths:
+      - /home/qrf/workarea/gillian/ria/ria/utils/utils/tests/utils/helpers
     status:
         project:
             default:
