@@ -31,7 +31,7 @@ jobs:
           pip install pytest-cov
         
       - name: Run tests and collect coverage
-        run: pytest --cov tests
+        run: pytest --cov utils
   
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
